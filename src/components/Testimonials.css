@@ -1,0 +1,150 @@
+.testimonials-section {
+  padding: 120px 0;
+  background-color: var(--bg-cream);
+  overflow: visible;
+  position: relative;
+}
+
+.testimonials-container {
+  position: relative;
+  min-height: 520px;
+}
+
+.testimonials-header {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.testimonials-heading {
+  color: var(--text-dark);
+}
+
+/* Central Card Layout */
+.testimonial-card-wrapper {
+  max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.testimonial-card {
+  background-color: var(--bg-white);
+  padding: 56px 48px;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  transition: var(--transition-smooth);
+}
+
+.testimonial-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+}
+
+.quote-icon-container {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  opacity: 0.7;
+}
+
+.testimonial-quote-text {
+  font-family: var(--font-body);
+  font-size: 19px;
+  line-height: 1.65;
+  color: var(--text-dark);
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 2;
+  font-weight: 400;
+}
+
+/* Moments Hub author brand styling */
+.testimonial-brand {
+  display: flex;
+  justify-content: center;
+}
+
+.brand-logo-tag {
+  background-color: #ffedd5; /* Soft pastel orange */
+  color: #ea580c; /* Rich orange */
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  box-shadow: 0 2px 5px rgba(234, 88, 12, 0.08);
+}
+
+/* Scattered Client Avatars */
+.scattered-avatar-item {
+  position: absolute;
+  z-index: 5;
+  transition: transform 0.2s cubic-bezier(0.215, 0.610, 0.355, 1.000); /* Smooth inertia */
+}
+
+.scattered-avatar-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 4px;
+  background-color: var(--bg-white);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: var(--transition-smooth);
+}
+
+.scattered-avatar-inner:hover {
+  transform: scale(1.15);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.scattered-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .testimonials-section {
+    padding: 80px 0;
+  }
+  
+  .testimonials-container {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Arrange avatars in a responsive grid on tablet/mobile */
+  .scattered-avatar-item {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    width: 60px !important;
+    height: 60px !important;
+    display: inline-block;
+    margin: 10px 5px;
+  }
+  
+  /* Container for avatars to stack nicely below card */
+  .testimonial-card-wrapper {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .testimonial-card {
+    padding: 32px 24px;
+  }
+  
+  .testimonial-quote-text {
+    font-size: 16px;
+  }
+}

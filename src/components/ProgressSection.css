@@ -1,0 +1,121 @@
+.progress-section {
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+  background-color: var(--bg-white);
+  border-top: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.bg-progress-waves {
+  position: absolute;
+  left: -50px;
+  bottom: 10%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.progress-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  z-index: 10;
+  padding-left: 20px;
+}
+
+.progress-heading {
+  margin-bottom: 24px;
+  color: var(--text-dark);
+}
+
+.progress-description {
+  margin-bottom: 24px;
+  max-width: 500px;
+}
+
+.progress-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.progress-image-wrapper {
+  position: relative;
+  width: 440px;
+  height: 440px;
+  border-radius: 50%;
+  padding: 8px;
+  background-color: var(--bg-white);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  transition: var(--transition-smooth);
+}
+
+.progress-image-wrapper:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+.progress-circle-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Red Triangle overlapping graphic */
+.progress-decor-triangle {
+  position: absolute;
+  bottom: -15px;
+  right: -10px;
+  z-index: 20;
+  animation: float-triangle-progress 4.5s ease-in-out infinite alternate;
+}
+
+@keyframes float-triangle-progress {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-10px) rotate(8deg);
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .progress-content {
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+  .progress-description {
+    max-width: 100%;
+  }
+  .progress-image-wrapper {
+    width: 320px;
+    height: 320px;
+  }
+  .progress-decor-triangle {
+    width: 65px;
+    height: 65px;
+    right: -5px;
+  }
+  
+  /* Reverse stacking on mobile so text always goes first */
+  .grid-progress-reversed {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 480px) {
+  .progress-section {
+    padding: 60px 0;
+  }
+  .progress-image-wrapper {
+    width: 250px;
+    height: 250px;
+  }
+}

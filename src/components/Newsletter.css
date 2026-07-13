@@ -1,0 +1,118 @@
+.newsletter-section {
+  padding: 100px 0;
+  background-color: var(--bg-newsletter);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.newsletter-accent-purple {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 90px;
+  background-color: var(--purple-accent);
+  border-top-left-radius: 90px;
+  border-bottom-left-radius: 90px;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.newsletter-accent-waves {
+  position: absolute;
+  left: 5%;
+  top: 15%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.newsletter-box {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.newsletter-heading {
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+.newsletter-subheading {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+/* Form pill wrapper */
+.newsletter-form {
+  display: flex;
+  background-color: var(--bg-white);
+  padding: 6px;
+  border-radius: 9999px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  max-width: 500px;
+  margin: 0 auto;
+  transition: var(--transition-smooth);
+}
+
+.newsletter-form:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(139, 92, 246, 0.15);
+}
+
+.newsletter-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 12px 24px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text-dark);
+  outline: none;
+}
+
+.newsletter-input::placeholder {
+  color: #94a3b8;
+}
+
+.newsletter-submit-btn {
+  background-color: var(--text-dark);
+  color: var(--bg-white);
+  padding: 14px 28px;
+  border-radius: 9999px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 14px;
+  transition: var(--transition-smooth);
+}
+
+.newsletter-submit-btn:hover {
+  background-color: var(--purple-accent);
+  transform: translateY(0);
+}
+
+@media (max-width: 640px) {
+  .newsletter-section {
+    padding: 70px 0;
+  }
+  .newsletter-form {
+    flex-direction: column;
+    background: transparent;
+    box-shadow: none;
+    gap: 12px;
+  }
+  .newsletter-input {
+    background-color: var(--bg-white);
+    border-radius: 9999px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  }
+  .newsletter-submit-btn {
+    width: 100%;
+  }
+}

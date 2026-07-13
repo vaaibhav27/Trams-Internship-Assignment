@@ -1,0 +1,130 @@
+.services-section {
+  padding: 100px 0;
+  background-color: var(--bg-white);
+  position: relative;
+}
+
+.services-header {
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+.services-heading {
+  color: var(--text-dark);
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.service-row-item {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.service-row-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0;
+  transition: var(--transition-smooth);
+  border-radius: 8px;
+}
+
+.service-row-item:hover .service-row-content {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgba(218, 240, 227, 0.2); /* Soft mint tint */
+}
+
+/* Category column (left) */
+.service-category {
+  flex: 1.2;
+  max-width: 280px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text-muted);
+  text-align: left;
+  line-height: 1.5;
+  padding-right: 20px;
+}
+
+/* Title column (center) */
+.service-title {
+  flex: 2.5;
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-align: left;
+  transition: var(--transition-smooth);
+}
+
+.service-row-item:hover .service-title {
+  transform: translateX(5px);
+  color: var(--purple-accent);
+}
+
+/* Arrow column (right) */
+.service-arrow {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dark);
+  transition: var(--transition-smooth);
+}
+
+.service-row-item:hover .service-arrow {
+  transform: translateX(12px) scale(1.1);
+  color: var(--purple-accent);
+}
+
+/* Row dividers */
+.service-row-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.08);
+  transition: var(--transition-smooth);
+}
+
+.service-row-item:hover .service-row-divider {
+  background-color: var(--text-dark);
+  height: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .service-row-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 30px 10px;
+  }
+  
+  .service-row-item:hover .service-row-content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .service-category {
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .service-title {
+    font-size: 24px;
+  }
+  
+  .service-arrow {
+    align-self: flex-end;
+  }
+  
+  .service-row-item:hover .service-arrow {
+    transform: translateX(6px);
+  }
+}
